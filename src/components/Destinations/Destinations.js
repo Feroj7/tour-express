@@ -29,7 +29,7 @@ const Destinations = () => {
                         :
                         Destinations.map(destination => <Col key={destination?._id}>
                             <Card className="package-card">
-                                <Card.Img variant="top" src={destination?.img} />
+                                <Card.Img style={{height: '300px'}} className="img-fluid" variant="top" src={destination?.img} />
                                 <Card.Body>
                                     <div className="d-flex justify-content-between mt-2">
                                         <div className="d-flex"><h5>{destination?.price} </h5><h6>/Per Person</h6></div>

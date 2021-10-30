@@ -4,15 +4,13 @@ import { Container, Spinner, Table, Button } from 'react-bootstrap';
 const ManageBookings = () => {
 
     const [bookings, setBookings] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [status, setStatus] = useState(false);
 
     useEffect(() => {
-        setLoading(true);
+        setStatus(false);
         fetch('https://sheltered-tundra-53360.herokuapp.com/bookings')
         .then(res => res.json())
         .then(data => setBookings(data))
-        .finally(() => setLoading(false));
     }, [status])
 
     const handleDelete = id => {
@@ -49,8 +47,9 @@ const ManageBookings = () => {
         <Container>
         <h2 className="mb-5">Manage All Bookings</h2>
          {
-             loading ? <div className="m-auto">
-             <Spinner animation="border" variant="primary" />
+             bookings.length === 0 ? <div className="m-auto">
+            <img className="img-fluid w-25 h-25" src="https://i.ibb.co/4W6j1TN/undraw-No-data-re-kwbl.png" alt="" />
+             <h3 className="text-secondary">There is No Booking</h3>
          </div>
                :
                <Table striped bordered hover responsive>

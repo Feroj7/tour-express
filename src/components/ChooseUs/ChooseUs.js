@@ -4,10 +4,10 @@ import './ChooseUs.css';
 
 const ChooseUs = () => {
     return (
-        <div className="my-5">
+        <div className="my-5 pt-5">
             <Container>
                 <h5>Why Choose Us</h5>
-                <h1>Why You Are Travel With Tour De</h1>
+                <h1>Why You Are Travel With Tour Express</h1>
                 <Row xs={1} lg={4} className="g-4 mt-3">
                     <Col>
                         <div className="choose-card">

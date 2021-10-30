@@ -1,0 +1,16 @@
+.login-form{
+    height:400px;
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #888888;
+    border-radius: 20px;
+}
+.login-form button{
+    margin-top:20px;
+}
+
+/* responsiveness for mobile */
+@media screen and (max-width: 600px) {
+    .login-form{
+        width:100% !important;
+    }
+}

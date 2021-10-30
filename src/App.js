@@ -13,6 +13,7 @@ import ManageBookings from './components/ManageBookings/ManageBookings';
 import AddDestination from './components/AddDestination/AddDestination';
 import Dashboard from './components/Dashboard/Dashboard';
 import Footer from './components/Footer/Footer';
+import AboutUs from './components/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route exact path="/home">
               <Home></Home>
+            </Route>
+            <Route exact path="/about">
+              <AboutUs></AboutUs>
             </Route>
             <PrivateRoute exact path="/booking/:id">
               <Booking></Booking>

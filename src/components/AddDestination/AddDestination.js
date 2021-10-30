@@ -24,9 +24,9 @@ const AddDestination = () => {
 
     return (
         <div className="my-5 pt-5">
-            <h2>Please Add a Destination</h2>
-            <form className="add-form mt-5" onSubmit={handleSubmit(onSubmit)}>
-                <input placeholder="Destination" {...register("title")} />
+            <h2>Please Add a New Destination</h2>
+            <form className="add-form mt-5 w-100" onSubmit={handleSubmit(onSubmit)}>
+                <input  placeholder="Destination" {...register("title")} />
                 <br />
                 <input className="my-3" placeholder="Duration" {...register("duration")} />
                 <br />
@@ -36,7 +36,7 @@ const AddDestination = () => {
                 <br />
                 <input className="mb-3" placeholder="Image URL" {...register("img")} />
                 <br />
-                <input className="btn btn-primary" type="submit" />
+                <input className="btn btn-primary mt-3" type="submit" />
             </form>
         </div>
     );

@@ -55,9 +55,9 @@ const Booking = () => {
                         <Spinner animation="border" variant="primary" />
                     </div>
                           :
-                          <Row>
+                          <Row className="g-4">
                         <Col xs={12} lg={8}>
-                            <img className="img-fluid w-100 h-50" src={destination?.img} alt="" />
+                            <img className="img-fluid w-75 h-50" src={destination?.img} alt="" />
                             <h1 className="text-start my-4"><i className="fas fa-map-marker-alt text-warning"></i> {destination?.title}</h1>
                             <hr />
                             <div className="d-flex justify-content-between">
@@ -80,15 +80,15 @@ const Booking = () => {
                         <Col xs={12} lg={4}>
                             <h2 className="mb-4">Booking This Destination</h2>
                             <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
-                                <input defaultValue={user?.displayName} {...register("name")} />
+                                <input className="form-control" defaultValue={user?.displayName} {...register("name")} />
                                 <br />
-                                <input className="my-3" type="email" defaultValue={user?.email} {...register("email")} />
+                                <input className="form-control" type="email" defaultValue={user?.email} {...register("email")} />
                                 <br />
-                                <input className="mb-3" defaultValue="Phone No" type="tel" {...register("number")} />
+                                <input className="form-control" defaultValue="Phone No" type="tel" {...register("number")} />
                                 <br />
-                                <input className="mb-3" type="date" {...register("date")} />
+                                <input className="form-control" type="date" {...register("date")} />
                                 <br />
-                                <input className="mb-3" defaultValue={destination?.title} {...register("destination")} />
+                                <input className="form-control" defaultValue={destination?.title} {...register("destination")} />
                                 <br />
                                 <input className="btn btn-primary" type="submit" />
                             </form>

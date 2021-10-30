@@ -1,4 +1,6 @@
 .add-form input{
     width:50%;
-    padding: 5px 0;
+    padding: 15px 10px;
+    border:none;
+    border-bottom: 1px solid cornflowerblue;
 }

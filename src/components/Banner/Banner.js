@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <div className="mt-5 pt-3 slider">
             <Carousel>
-            <Carousel.Item>
+            <Carousel.Item className="silder-item">
                 <img
                     className="d-block w-100"
                     src="https://www.tourx-react.egenslab.com/static/media/banner-3.ff884c34.png"
