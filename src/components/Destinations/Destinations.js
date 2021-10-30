@@ -10,7 +10,7 @@ const Destinations = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://localhost:5000/destinations')
+        fetch('https://sheltered-tundra-53360.herokuapp.com/destinations')
             .then(res => res.json())
             .then(data => setDestinations(data))
             .finally(() => setLoading(false));
@@ -19,7 +19,7 @@ const Destinations = () => {
     return (
         <div className="destinations my-4">
             <Container>
-                <p>Choose Your Destination</p>
+                <h5>Choose Your Destination</h5>
                 <h1>Select Our Best Destination For Your Travel</h1>
                 <Row xs={1} md={3} className="g-4 mt-3">
                     {

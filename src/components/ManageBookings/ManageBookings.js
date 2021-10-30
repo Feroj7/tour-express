@@ -9,7 +9,7 @@ const ManageBookings = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch('http://localhost:5000/bookings')
+        fetch('https://sheltered-tundra-53360.herokuapp.com/bookings')
         .then(res => res.json())
         .then(data => setBookings(data))
         .finally(() => setLoading(false));
@@ -18,7 +18,7 @@ const ManageBookings = () => {
     const handleDelete = id => {
        const proceed = window.confirm('Are You Sure, You Want to Cancel this Booking ?');
        if(proceed){
-        fetch(`http://localhost:5000/bookings/${id}`,{
+        fetch(`https://sheltered-tundra-53360.herokuapp.com/bookings/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -32,7 +32,7 @@ const ManageBookings = () => {
     }
  
     const handleStatus = id => {
-            fetch(`http://localhost:5000/bookings/${id}`,{
+            fetch(`https://sheltered-tundra-53360.herokuapp.com/bookings/${id}`,{
             method: 'PUT'
         })
         .then(res => res.json())
@@ -45,7 +45,7 @@ const ManageBookings = () => {
     }
 
     return (
-        <div className="mt-5 pt-5">
+        <div className="my-5 pt-5">
         <Container>
         <h2 className="mb-5">Manage All Bookings</h2>
          {
@@ -53,7 +53,7 @@ const ManageBookings = () => {
              <Spinner animation="border" variant="primary" />
          </div>
                :
-               <Table striped bordered hover>
+               <Table striped bordered hover responsive>
              <thead>
                  <tr>
                      <th>#</th>

@@ -1,0 +1,22 @@
+.text h3{
+    font-size:48px;
+    color:#0663f0;
+}
+.text p{
+    font-size:35px;
+}
+.text{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+    border-radius:30px;
+    padding:10px;
+} 
+
+/* responsiveness for mobile */
+@media screen and (max-width:600px){
+    .text h3{
+        font-size:18px;
+    }
+    .text p{
+        font-size:10px;
+    } 
+}

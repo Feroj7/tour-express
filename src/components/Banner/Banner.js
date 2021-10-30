@@ -1,9 +1,10 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import './Banner.css';
 
 const Banner = () => {
     return (
-        <div className="mt-5 pt-3">
+        <div className="mt-5 pt-3 slider">
             <Carousel>
             <Carousel.Item>
                 <img
@@ -11,9 +12,9 @@ const Banner = () => {
                     src="https://www.tourx-react.egenslab.com/static/media/banner-3.ff884c34.png"
                     alt="First slide"
                 />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <Carousel.Caption className="text">
+                    <h3>Amazing Tour In Madagascar</h3>
+                    <p>5 Days, 6 Night Tour</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -23,9 +24,9 @@ const Banner = () => {
                     alt="Second slide"
                 />
 
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <Carousel.Caption className="text">
+                    <h3>Amazing Tour In Indonesia</h3>
+                    <p>8 Days, 9 Night Tour</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -36,9 +37,9 @@ const Banner = () => {
                     
                 />
 
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                <Carousel.Caption className="text">
+                    <h3>Amazing Tour In Australia</h3>
+                    <p>5 Days, 6 Night Tour</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

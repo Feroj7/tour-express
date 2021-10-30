@@ -11,6 +11,8 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import MyBookings from './components/MyBookings/MyBookings';
 import ManageBookings from './components/ManageBookings/ManageBookings';
 import AddDestination from './components/AddDestination/AddDestination';
+import Dashboard from './components/Dashboard/Dashboard';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -37,6 +39,9 @@ function App() {
             <PrivateRoute exact path="/addDestination">
              <AddDestination></AddDestination>
             </PrivateRoute>
+            <PrivateRoute exact path="/dashboard">
+             <Dashboard></Dashboard>
+            </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>
             </Route>
@@ -44,6 +49,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

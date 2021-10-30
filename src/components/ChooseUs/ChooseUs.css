@@ -1,0 +1,9 @@
+.choose-card{
+    background-color: #304F47;
+    padding:30px;
+    color:white;
+    border-radius: 10px;
+}
+.choose-card img{
+    width:70px;
+}

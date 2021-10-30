@@ -6,7 +6,7 @@ const AddDestination = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/destinations',{
+        fetch('https://sheltered-tundra-53360.herokuapp.com/destinations',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -23,7 +23,7 @@ const AddDestination = () => {
     }
 
     return (
-        <div className="mt-5 pt-5">
+        <div className="my-5 pt-5">
             <h2>Please Add a Destination</h2>
             <form className="add-form mt-5" onSubmit={handleSubmit(onSubmit)}>
                 <input placeholder="Destination" {...register("title")} />

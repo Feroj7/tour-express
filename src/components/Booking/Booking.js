@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Container, Row, Col, Spinner } from 'react-bootstrap';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import { useForm } from "react-hook-form";
 import useAuth from '../../hooks/useAuth';
 import './Booking.css';
@@ -12,11 +12,12 @@ const Booking = () => {
     const { id } = useParams();
     const { user } = useAuth();
     const [loading, setLoading] = useState(true);
+    const history = useHistory();
 
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:5000/booking/${id}`)
+        fetch(`https://sheltered-tundra-53360.herokuapp.com/booking/${id}`)
             .then(res => res.json())
             .then(data => setDestination(data))
             .finally(() => setLoading(false))
@@ -29,7 +30,7 @@ const Booking = () => {
         data.price = destination?.price;
         data.imageURL = destination?.img;
         data.status = 'Pending';
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://sheltered-tundra-53360.herokuapp.com/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,6 +42,7 @@ const Booking = () => {
                 if (result.insertedId) {
                     alert('Booking Placed Succesfully');
                     reset();
+                    history.push('/mybookings');
                 }
             })
     };
@@ -55,7 +57,7 @@ const Booking = () => {
                           :
                           <Row>
                         <Col xs={12} lg={8}>
-                            <img className="img-fluid w-100 h-75" src={destination?.img} alt="" />
+                            <img className="img-fluid w-100 h-50" src={destination?.img} alt="" />
                             <h1 className="text-start my-4"><i className="fas fa-map-marker-alt text-warning"></i> {destination?.title}</h1>
                             <hr />
                             <div className="d-flex justify-content-between">

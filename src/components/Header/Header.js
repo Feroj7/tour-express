@@ -9,6 +9,7 @@ const Header = () => {
     const { user, logOut } = useAuth();
 
     return (
+        <div className="header">
         <Navbar collapseOnSelect expand="lg" bg="light" variant="dark" fixed="top">
             <Container>
                 <Link to="/home">
@@ -28,8 +29,7 @@ const Header = () => {
                             <>
                                 <Nav className="menu-item">
                                     <Link to="/mybookings">My Bookings</Link>
-                                    <Link to="/managebookings">Manage All Bookings</Link>
-                                    <Link to="/addDestination">Add a Destination</Link>
+                                    <Link to="/dashboard">Dashboard</Link>
                                 </Nav>
                                 <Button onClick={logOut}>Logout</Button>
                             </>
@@ -44,6 +44,7 @@ const Header = () => {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+        </div>
     );
 };
 
