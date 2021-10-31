@@ -41,10 +41,10 @@ function App() {
               <ManageBookings></ManageBookings>
             </PrivateRoute>
             <PrivateRoute exact path="/addDestination">
-             <AddDestination></AddDestination>
+              <AddDestination></AddDestination>
             </PrivateRoute>
             <PrivateRoute exact path="/dashboard">
-             <Dashboard></Dashboard>
+              <Dashboard></Dashboard>
             </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>

@@ -6,27 +6,27 @@ const AddDestination = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('https://sheltered-tundra-53360.herokuapp.com/destinations',{
+        fetch('https://sheltered-tundra-53360.herokuapp.com/destinations', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(data)
         })
-        .then(res => res.json())
-        .then(result => {
-            if(result.insertedId){
-                alert('New Destination Added Successfully');
-                reset()
-            }
-        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.insertedId) {
+                    alert('New Destination Added Successfully');
+                    reset()
+                }
+            })
     }
 
     return (
         <div className="my-5 pt-5">
             <h2>Please Add a New Destination</h2>
             <form className="add-form mt-5 w-100" onSubmit={handleSubmit(onSubmit)}>
-                <input  placeholder="Destination" {...register("title", { required: true })} />
+                <input placeholder="Destination" {...register("title", { required: true })} />
                 <br />
                 <input className="my-3" placeholder="Duration" {...register("duration", { required: true })} />
                 <br />

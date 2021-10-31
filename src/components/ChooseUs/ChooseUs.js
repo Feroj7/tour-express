@@ -16,19 +16,19 @@ const ChooseUs = () => {
                         </div>
                     </Col>
                     <Col>
-                    <div className="choose-card">
+                        <div className="choose-card">
                             <img className="img-fluid mb-3" src="https://cdn-icons-png.flaticon.com/512/4371/4371433.png" alt="" />
                             <h3>100% trusted travel agency</h3>
                         </div>
                     </Col>
                     <Col>
-                    <div className="choose-card">
+                        <div className="choose-card">
                             <img className="img-fluid mb-3" src="https://cdn-icons-png.flaticon.com/512/2303/2303915.png" alt="" />
                             <h3>10+ year of travel experience</h3>
                         </div>
                     </Col>
                     <Col>
-                    <div className="choose-card">
+                        <div className="choose-card">
                             <img className="img-fluid mb-3" src="https://cdn-icons-png.flaticon.com/512/3284/3284573.png" alt="" />
                             <h3>90% of our traveller happy</h3>
                         </div>

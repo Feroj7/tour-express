@@ -11,38 +11,38 @@ const useFirebase = () => {
     const auth = getAuth();
 
     const signInWithGoogle = () => {
-        setIsLoading(true); 
+        setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
         return signInWithPopup(auth, googleProvider)
-        .catch(error => {
-            console.log(error.message);
-        })
-        .finally(() => setIsLoading(false))
+            .catch(error => {
+                console.log(error.message);
+            })
+            .finally(() => setIsLoading(false))
     };
 
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, user => {
-            if(user){
+            if (user) {
                 setUser(user)
             }
-            else{
+            else {
                 setUser({})
             }
             setIsLoading(false)
         })
         return () => unsubscribed;
-    }, []); 
+    }, []);
 
     const logOut = () => {
         setIsLoading(true);
         signOut(auth)
-        .then( () => {
-            setUser({})
-        })
-        .catch(error => {
-            console.log(error.message);
-        })
-        .finally(() => setIsLoading(false))
+            .then(() => {
+                setUser({})
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+            .finally(() => setIsLoading(false))
     };
 
     return {
