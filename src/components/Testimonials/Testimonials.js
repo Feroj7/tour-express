@@ -23,7 +23,7 @@ const Testimonials = () => {
                         <img className="img-fluid mb-3" src="https://www.tourx-react.egenslab.com/static/media/reviewer-3.21d99f5c.png" alt="" />
                         <h2>Shwan Paul</h2>
                         <h5 className="text-secondary">Traveller</h5>
-                        <p>I found Tour Hobe easy to use, and felt that I could email/ call if I had any queries regarding our accommodation. Everything went to plan and our proposed itinerary was very clear.</p>
+                        <p>I found Tour Express easy to use, and felt that I could email/ call if I had any queries regarding our accommodation. Everything went to plan and our proposed itinerary was very clear.</p>
                     </Col>
                     <Col>
                         <img className="img-fluid mb-3" src="https://www.tourx-react.egenslab.com/static/media/reviewer-1.07859027.png" alt="" />
