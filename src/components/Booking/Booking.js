@@ -102,15 +102,15 @@ const Booking = () => {
                             <Col xs={12} lg={4}>
                                 <h2 className="mb-4 mt-3">Booking This Destination</h2>
                                 <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
-                                    <input defaultValue={user?.displayName} {...register("name")} />
+                                    <input defaultValue={user?.displayName} {...register("name", { required: true })} />
                                     <br />
-                                    <input type="email" defaultValue={user?.email} {...register("email")} />
+                                    <input type="email" defaultValue={user?.email} {...register("email", { required: true })} />
                                     <br />
                                     <input placeholder="Phone No" type="tel" {...register("number", { required: true })} />
                                     <br />
                                     <input type="date" {...register("date", { required: true })} />
                                     <br />
-                                    <input defaultValue={destination?.title} {...register("destination")} />
+                                    <input defaultValue={destination?.title} {...register("destination", { required: true })} />
                                     <br />
                                     <input className="btn btn-primary mt-3 mb-5" type="submit" />
                                 </form>
