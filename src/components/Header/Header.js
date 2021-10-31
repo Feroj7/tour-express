@@ -18,7 +18,7 @@ const Header = () => {
                     <Navbar.Brand className="text-dark fw-bold text-decoration-none">Tour Express</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="ms-auto menu-item fw-bold">
+                        <Nav className="ms-auto menu-item">
                             <Link to="/home">Home</Link>
                             <Link to="/about">About Us</Link>
                         </Nav>
@@ -27,7 +27,7 @@ const Header = () => {
                             user?.email ?
 
                                 <>
-                                    <Nav className="menu-item fw-bold">
+                                    <Nav className="menu-item">
                                         <Link to="/mybookings">My Bookings</Link>
                                         <Link to="/dashboard"><i className="fas fa-user-shield"></i> Admin Dashboard</Link>
                                     </Nav>

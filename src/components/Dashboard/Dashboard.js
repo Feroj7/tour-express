@@ -23,8 +23,8 @@ const Dashboard = () => {
                 </Col>
                 <Col lg={10}>
                 { control === 'user-info' && 
-                <div className="mt-5 pt-5">
-                    <img className="img-fluid" src={user?.photoURL} alt="" />
+                <div className="mt-5 pt-5 user-info">
+                    <img className="img-fluid border" src={user?.photoURL} alt="" />
                     <h1>Welcome <span className="text-primary">{user?.displayName}</span></h1>
                     <h5>{user?.email}</h5>
                 </div> }
