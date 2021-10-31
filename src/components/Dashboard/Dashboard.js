@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import AddDestination from '../AddDestination/AddDestination';
 import ManageBookings from '../ManageBookings/ManageBookings';
-import MyBookings from '../MyBookings/MyBookings';
 import './Dashboard.css';
 
 const Dashboard = () => {

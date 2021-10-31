@@ -17,13 +17,13 @@ const ChooseUs = () => {
                     </Col>
                     <Col>
                     <div className="choose-card">
-                            <img className="img-fluid mb-3" src="https://cdn-icons.flaticon.com/png/512/3967/premium/3967544.png?token=exp=1635609826~hmac=93019e0363fae068cb0a492a84cb167b" alt="" />
+                            <img className="img-fluid mb-3" src="https://cdn-icons-png.flaticon.com/512/4371/4371433.png" alt="" />
                             <h3>100% trusted travel agency</h3>
                         </div>
                     </Col>
                     <Col>
                     <div className="choose-card">
-                            <img className="img-fluid mb-3" src="https://cdn-icons.flaticon.com/png/512/1702/premium/1702529.png?token=exp=1635609720~hmac=6e88bdd18971d44cd616d933be71f242" alt="" />
+                            <img className="img-fluid mb-3" src="https://cdn-icons-png.flaticon.com/512/2303/2303915.png" alt="" />
                             <h3>10+ year of travel experience</h3>
                         </div>
                     </Col>
