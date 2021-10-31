@@ -16,7 +16,7 @@ const Header = () => {
                         <img className="img-fluid logo me-2" src="https://seeklogo.com/images/B/beach-tour-logo-4505456896-seeklogo.com.png" alt="logo" />
                     </Link>
                     <Navbar.Brand className="text-dark fw-bold text-decoration-none">Tour Express</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="text-primary bg-primary" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto menu-item">
                             <Link to="/home">Home</Link>
