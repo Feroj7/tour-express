@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Spinner, Table, Button } from 'react-bootstrap';
+import { Container, Table, Button } from 'react-bootstrap';
 
 const ManageBookings = () => {
 
     const [bookings, setBookings] = useState([]);
-    const [status, setStatus] = useState(false);
 
     useEffect(() => {
-        setStatus(false);
         fetch('https://sheltered-tundra-53360.herokuapp.com/bookings')
         .then(res => res.json())
         .then(data => setBookings(data))
-    }, [status])
+    }, [bookings])
 
     const handleDelete = id => {
        const proceed = window.confirm('Are You Sure, You Want to Cancel this Booking ?');
@@ -37,7 +35,6 @@ const ManageBookings = () => {
         .then(result => {
             if(result.modifiedCount > 0){
                 alert('Booking Approved Successfully')
-                setStatus(true)
             }
         })
     }

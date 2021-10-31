@@ -13,7 +13,7 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption className="text">
-                    <h3>Amazing Tour In Madagascar</h3>
+                    <h3>Amazing Tour In Italy</h3>
                     <p>5 Days, 6 Night Tour</p>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -38,7 +38,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption className="text">
-                    <h3>Amazing Tour In Australia</h3>
+                    <h3>Amazing Tour In France</h3>
                     <p>5 Days, 6 Night Tour</p>
                 </Carousel.Caption>
             </Carousel.Item>

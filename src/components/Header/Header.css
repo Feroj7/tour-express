@@ -14,3 +14,15 @@
     border-radius: 50%;
     margin-left:5px;
 }
+
+/* responsiveness for mobile */
+@media screen and (max-width: 600px){
+    .user{
+        margin-left:100px;
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+    .menu-item a{
+        margin-right: 0;
+    }
+}

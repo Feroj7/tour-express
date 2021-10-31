@@ -26,15 +26,15 @@ const AddDestination = () => {
         <div className="my-5 pt-5">
             <h2>Please Add a New Destination</h2>
             <form className="add-form mt-5 w-100" onSubmit={handleSubmit(onSubmit)}>
-                <input  placeholder="Destination" {...register("title")} />
+                <input  placeholder="Destination" {...register("title", { required: true })} />
                 <br />
-                <input className="my-3" placeholder="Duration" {...register("duration")} />
+                <input className="my-3" placeholder="Duration" {...register("duration", { required: true })} />
                 <br />
-                <input className="mb-3" placeholder="Price" {...register("price")} />
+                <input className="mb-3" placeholder="Price" {...register("price", { required: true })} />
                 <br />
-                <input className="mb-3" placeholder="Rating" {...register("rating")} />
+                <input className="mb-3" placeholder="Rating" {...register("rating", { required: true })} />
                 <br />
-                <input className="mb-3" placeholder="Image URL" {...register("img")} />
+                <input className="mb-3" placeholder="Image URL" {...register("img", { required: true })} />
                 <br />
                 <input className="btn btn-primary mt-3" type="submit" />
             </form>

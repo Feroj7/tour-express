@@ -7,5 +7,6 @@ Features:
 * This is a digital tour booking site.
 * Here you can found different destinations for your vaccation.
 * You can book destination and also cancel your booking.
-* This site was created by using react, react router, firebase, node, express, mongodb.
+* Admin Dashboard - Manage all bookings and add a new destination. 
 * CRUD operation Create, Read, Update and Delete is used. 
+* This site was created by using react, react router, firebase, node, express, mongodb.

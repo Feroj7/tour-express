@@ -27,6 +27,7 @@ const Booking = () => {
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
+        console.log(data);
         data.price = destination?.price;
         data.imageURL = destination?.img;
         data.status = 'Pending';
@@ -55,7 +56,7 @@ const Booking = () => {
                         <Spinner animation="border" variant="primary" />
                     </div>
                           :
-                          <Row className="g-4">
+                        <Row className="g-4">
                         <Col xs={12} lg={8}>
                             <img className="img-fluid w-75 h-50" src={destination?.img} alt="" />
                             <h1 className="text-start my-4"><i className="fas fa-map-marker-alt text-warning"></i> {destination?.title}</h1>
@@ -78,19 +79,19 @@ const Booking = () => {
                             <hr />
                         </Col>
                         <Col xs={12} lg={4}>
-                            <h2 className="mb-4">Booking This Destination</h2>
+                            <h2 className="mb-4 mt-3">Booking This Destination</h2>
                             <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
-                                <input className="form-control" defaultValue={user?.displayName} {...register("name")} />
+                                <input defaultValue={user?.displayName} {...register("name")} />
                                 <br />
-                                <input className="form-control" type="email" defaultValue={user?.email} {...register("email")} />
+                                <input type="email" defaultValue={user?.email} {...register("email")} />
                                 <br />
-                                <input className="form-control" defaultValue="Phone No" type="tel" {...register("number")} />
+                                <input placeholder="Phone No" type="tel" {...register("number",{ required: true })} />
                                 <br />
-                                <input className="form-control" type="date" {...register("date")} />
+                                <input type="date" {...register("date",{ required: true })} />
                                 <br />
-                                <input className="form-control" defaultValue={destination?.title} {...register("destination")} />
+                                <input defaultValue={destination?.title} {...register("destination")} />
                                 <br />
-                                <input className="btn btn-primary" type="submit" />
+                                <input className="btn btn-primary mt-3 mb-5" type="submit" />
                             </form>
                         </Col>
                     </Row>

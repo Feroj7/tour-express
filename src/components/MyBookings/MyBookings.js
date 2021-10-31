@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Table, Button, Spinner, Row, Col } from 'react-bootstrap';
+import { Container, Button, Row, Col } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
+import './MyBookings.css';
 
 const MyBookings = () => {
 
@@ -42,11 +43,11 @@ const MyBookings = () => {
                         <Row xs={1} lg={2} className="g-5">
                             {
                                 bookings.map(booking => <Col key={booking?._id}>
-                                    <div className="d-sm-flex flex-sm-column d-lg-flex flex-lg-row justify-content-sm-center align-items-sm-center">
+                                    <div className="booked-item d-sm-flex flex-sm-column d-lg-flex flex-lg-row justify-content-sm-center align-items-sm-center">
                                         <div>
                                             <img className="img-fluid" src={booking?.imageURL} alt="" />
                                         </div>
-                                        <div className="ms-3 w-50">
+                                        <div className="ms-3 w-75">
                                             <h6 className={booking?.status === 'Pending' ? 'text-danger text-start' : 'text-success text-start'}>{booking?.status}</h6>
                                             <div className="text-start">
                                                 <h4>{booking?.destination}</h4>

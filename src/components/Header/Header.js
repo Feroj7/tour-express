@@ -31,7 +31,7 @@ const Header = () => {
                                         <Link to="/mybookings">My Bookings</Link>
                                         <Link to="/dashboard"><i className="fas fa-user-shield"></i> Admin Dashboard</Link>
                                     </Nav>
-                                    <div className="d-flex me-3">
+                                    <div className="d-flex me-3 user">
                                         <img className="img-fluid user-img" src={user?.photoURL} alt="" />
                                         <p className="pt-2 ps-2">{user?.displayName}</p>
                                     </div>
